@@ -46,7 +46,6 @@ public class Main {
         System.out.println("maxSpeed - " + car.maxSpeed);
 
         car = null;
-
         System.gc();
     }
 

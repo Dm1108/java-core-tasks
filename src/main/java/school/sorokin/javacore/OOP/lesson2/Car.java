@@ -8,7 +8,6 @@ public class Car {
     double weight;
     int maxSpeed;
 
-
     protected void finalize() {
 
         System.out.println("Car destroyed");
