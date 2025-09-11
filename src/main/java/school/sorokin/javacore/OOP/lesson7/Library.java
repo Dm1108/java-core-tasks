@@ -1,4 +1,4 @@
-package school.sorokin.javacore.OOP.Lesson7;
+package school.sorokin.javacore.OOP.lesson7;
 
 public class Library {
 
