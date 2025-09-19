@@ -31,16 +31,16 @@ public class ExceptionExample {
                 operationInfo.add(info);
             } catch (InputMismatchException e) {
                 String mismatch = "Вы ввели не число. Повторите ввод";
-                logger.log(Level.SEVERE, mismatch);
+                logger.log(Level.SEVERE, mismatch, e);
                 operationInfo.add(mismatch);
             } catch (ArithmeticException e) {
                 String arithmetic = "Деление " + number1 + " / " + number2 + " завершилось ошибкой: деление на ноль";
-                logger.log(Level.SEVERE, arithmetic);
+                logger.log(Level.SEVERE, arithmetic, e);
                 operationInfo.add(arithmetic);
             }
             System.out.println("Хотите выполнить ещё одно деление: да / нет ");
-            String yesOrNo = scanner.nextLine();
             while (true) {
+                String yesOrNo = scanner.nextLine();
                 if (yesOrNo.equalsIgnoreCase("да") || yesOrNo.equalsIgnoreCase("нет")) {
                     switch (yesOrNo) {
                         case "да":
@@ -49,11 +49,10 @@ public class ExceptionExample {
                             System.out.println(operationInfo);
                             System.exit(0);
                     }
+                    break;
                 } else {
                     System.out.println("Вы ввели неправильное слово. Повторите ввод");
-                    scanner.nextLine();
                 }
-                break;
             }
         }
     }
