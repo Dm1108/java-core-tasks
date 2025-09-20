@@ -1,4 +1,4 @@
-package school.sorokin.javacore.exception.lessson3;
+package school.sorokin.javacore.exception.lesson3;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -33,10 +33,12 @@ public class ExceptionExample {
                 String mismatch = "Вы ввели не число. Повторите ввод";
                 logger.log(Level.SEVERE, mismatch, e);
                 operationInfo.add(mismatch);
+                scanner.reset();
             } catch (ArithmeticException e) {
                 String arithmetic = "Деление " + number1 + " / " + number2 + " завершилось ошибкой: деление на ноль";
                 logger.log(Level.SEVERE, arithmetic, e);
                 operationInfo.add(arithmetic);
+                scanner.reset();
             }
             System.out.println("Хотите выполнить ещё одно деление: да / нет ");
             while (true) {
